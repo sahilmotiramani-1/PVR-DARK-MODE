@@ -57,7 +57,12 @@
         applyDarkMode(saved === '1');
 
         toggleBtn.addEventListener('click', () => {
-            applyDarkMode(darkSheet.disabled);
+            // Compute the next state: dark is enabled when darkSheet.disabled is false
+            const nextDark = !darkSheet.disabled;
+            localStorage.setItem(STORAGE_KEY, nextDark ? '1' : '0');
+            // Debug log and reload so the SDK initializes with the selected CSS
+            console.log('theme toggle clicked — nextDark=', nextDark);
+            window.location.reload();
         });
 
         const css = saved === '1' ? './haptikbot-dark.css' : './haptikbot-inox.css';
