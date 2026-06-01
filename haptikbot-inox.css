@@ -1,0 +1,150 @@
+/* Hide language icon */
+.actions[data-testid='languageButton'] {
+  display: none !important;
+}
+
+.body {
+  font-size: 12px !important;
+}
+
+.hsl-actionable {
+  padding: 6px 12px !important;
+  background-color: #fff !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.header-v2-top-left-image img {
+  border-radius: 50% !important;
+}
+
+.hsl-carousel-element {
+  min-width: 130px !important;
+}
+
+.hsl-carousel-element-image {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.hsl-carousel-element-image img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.hsl-bubble-text {
+  font-size: 12px !important;
+  background-color: #dce2ef !important; /* Change for INOX */
+  color: #000 !important;
+}
+
+.composerv2-text-area.v2::placeholder {
+  color: #000 !important;
+}
+.composerv2-text-area.v2:focus::placeholder {
+  color: gray !important;
+}
+
+.taskbox-new-CTA {
+  padding: 12px 16px !important;
+}
+
+.hsl-button-text,
+.hsl.form .hsl-form-subtitle,
+.hsl.form .hsl-form-title,
+.quick-reply-option-text {
+  font-size: 12px !important;
+}
+
+.hsl-form-element {
+  height: 32px !important;
+}
+
+.hsl.form .hsl-form-button {
+  padding: 8px 12px !important;
+  font-size: 12px !important;
+}
+
+.quick-reply-stacked {
+  padding-top: 0px !important;
+}
+
+.message-section-message-row.from-business::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: start;
+  background-image: url('https://haptikappimg.haptikapi.com/uploads/f8632a92c693d7458243280d755fc45b.jpg?w=640&h=640');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Hide icon if previous message is also from business */
+.message-section-message-row.from-business + .message-section-message-row.from-business::before {
+  content: '';
+  background-image: none;
+}
+
+.message-section-message-row.from-business {
+  align-items: flex-start !important;
+}
+
+.message-section-message-row.from-business:has(.hsl.carousel):not(:has(.active-last))::before {
+  content: none !important;
+  background-image: none !important;
+}
+
+.quick-reply-option-text.v2 {
+  color: #fff !important;
+}
+
+.hsl.form {
+  width: 340px !important;
+}
+
+.hsl.form + .message-timestamp.left {
+  margin-left: 32px !important;
+}
+
+.hsl.form .hsl-form-button.active {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.hsl.form .hsl-form-button.active:hover {
+  background-color: var(--send-button-hover-color);
+}
+
+.hsl-carousel-element.hsl-carousel-elements-item .hsl-actionables .hsl-actionable,
+.hsl-form-button.active,
+.hsl-actionable {
+  background-color: #234b9e !important;
+  transition: background-color 0.6s ease;
+}
+
+.task-new-title,
+.taskbox-new-compressTasks {
+  color: #000 !important;
+}
+
+.taskbox-new-compressTasks-iconWrapper svg path {
+  stroke: #000 !important;
+}
+
+.hsl-form-button.active .hsl-form-button-body .v2,
+.hsl-carousel-element.hsl-carousel-elements-item .hsl-actionables .hsl-actionable .hsl-actionable-text.v2,
+.hsl-actionable-text.v2 {
+  color: #fff !important;
+}
+
+.hsl-carousel-element.hsl-carousel-elements-item .hsl-actionables .hsl-actionable.disabled,
+.hsl-actionable.disabled {
+  background-color: #fff !important;
+  transition: background-color 0.6s ease;
+}
+
+.hsl-carousel-element.hsl-carousel-elements-item .hsl-actionables .hsl-actionable.disabled .hsl-actionable-text.v2,
+.hsl-actionable.disabled .hsl-actionable-text.v2 {
+  color: #000 !important;
+}
