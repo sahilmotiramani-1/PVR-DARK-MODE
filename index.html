@@ -9,63 +9,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Light mode base (PVR Gold theme) -->
-    <link rel="stylesheet" id="pvr-theme-light" href="./haptikbot-inox.css">
+    <!-- Dark theme only -->
+    <link rel="stylesheet" id="pvr-theme-dark" href="./haptikbot-dark.css">
+    <style>
+        /* Basic reset and font */
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--pvr-bg, #0A0A0A);
+            color: var(--pvr-text-primary, #FFFFFF);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
-    <!-- Dark mode override — toggled via JS -->
-    <link rel="stylesheet" id="pvr-theme-dark" href="./haptikbot-dark.css" disabled>
-
+        .pvr-dark-mode {
+            background-color: var(--pvr-bg, #0A0A0A);
+            color: var(--pvr-text-primary, #FFFFFF);
+        }
+    </style>
 </head>
 
 <body>
 
     PVR WEB APP
 
-    <!-- Dark Mode Toggle Button -->
-    <button
-        id="dark-mode-toggle"
-        aria-label="Toggle dark mode"
-        data-label="Dark Mode"
-        title="Toggle Dark Mode"
-    >🌙</button>
-
     <script>
-        /* ── Dark Mode Toggle Logic ─────────────────────────── */
-        const toggleBtn    = document.getElementById('dark-mode-toggle');
-        const lightSheet   = document.getElementById('pvr-theme-light');
-        const darkSheet    = document.getElementById('pvr-theme-dark');
-        const STORAGE_KEY  = 'pvr_dark_mode';
+        /* ── Dark theme only ─────────────────────────────────── */
+        const darkSheet = document.getElementById('pvr-theme-dark');
+        const css       = './haptikbot-dark.css';
 
-        function applyDarkMode(enable) {
-            darkSheet.disabled = !enable;
-            lightSheet.disabled = enable;
-            document.body.classList.toggle('pvr-dark-mode', enable);
-
-            if (enable) {
-                toggleBtn.textContent   = '☀️';
-                toggleBtn.dataset.label = 'Light Mode';
-                localStorage.setItem(STORAGE_KEY, '1');
-            } else {
-                toggleBtn.textContent   = '🌙';
-                toggleBtn.dataset.label = 'Dark Mode';
-                localStorage.setItem(STORAGE_KEY, '0');
-            }
+        function applyDarkMode() {
+            darkSheet.disabled = false;
+            document.body.classList.add('pvr-dark-mode');
         }
 
-        // Restore saved preference on load
-        const saved = localStorage.getItem(STORAGE_KEY);
-        applyDarkMode(saved === '1');
-
-        toggleBtn.addEventListener('click', () => {
-            // Compute the next state: dark is enabled when darkSheet.disabled is false
-            const nextDark = !darkSheet.disabled;
-            localStorage.setItem(STORAGE_KEY, nextDark ? '1' : '0');
-            // Debug log and reload so the SDK initializes with the selected CSS
-            console.log('theme toggle clicked — nextDark=', nextDark);
-            window.location.reload();
-        });
-
-        const css = saved === '1' ? './haptikbot-dark.css' : './haptikbot-inox.css';
+        applyDarkMode();
         /* ── Haptik SDK Init ─────────────────────────────────── */
         var haptikInitSettings = {
             'business-id': '7203',
@@ -125,7 +106,15 @@
         type="text/javascript"
         charset="UTF-8"
         src="https://toolassets.haptikapi.com/platform/javascript-xdk/production/loader.js">
-</script>
+        const style = document.createElement('style');
+        style.textContent = `
+            .hsl.carousel::before,
+            .hsl.carousel::after {
+                content: none !important;
+                display: none !important;
+         }   `;
+document.head.appendChild(style);
+    </script>
 
 </body>
-</html>-->-->-->-->>
+</html>
