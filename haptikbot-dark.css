@@ -18,10 +18,12 @@ body,
   font-family: 'Inter', sans-serif !important;
 }
 
-.extended-view active {
+.extended-view.active {
   background-color: #161616 !important;
-  border: 1px solid #FFBD51 !important;
+  /* border: 1px solid #FFBD51 !important; */
+  box-shadow: 0 4px 12px #F8A825 !important;
 }
+
 
 /* ── WIDGET SHELL & BACKDROP ─────────────────────────────── */
 .taskbox-new,
