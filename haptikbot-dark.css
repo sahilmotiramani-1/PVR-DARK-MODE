@@ -103,6 +103,7 @@ body,
   background-color: #1F1F1F !important;
   
   color: #B5B5B5 !important;
+  border: 1px solid #1F1F1F !important;
 }
 /* ── BOT MESSAGE BUBBLE ───────────────────────────────────── */
 .hsl-bubble-text {
