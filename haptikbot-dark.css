@@ -45,6 +45,9 @@ body,
     display: none !important;
     content: none !important;
 }
+.typing-indicator{
+  color: #858585 !important;
+}
 .header-v2-top-left-image img {
   border-radius: 50% !important;
   border: 2px solid #FFBD51 !important;
