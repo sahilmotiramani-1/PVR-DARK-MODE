@@ -173,10 +173,10 @@ body,
   transition: background-color 0.2s ease, transform 0.1s ease !important;
 }
 
-.hsl-actionable:hover,
+/* .hsl-actionable:hover,
 .hsl-actionable:active {
   background-color: #1F1F1F !important;
-}
+} */
 
 .hsl-actionable:hover .hsl-actionable-text.v2,
 .hsl-actionable:active .hsl-actionable-text.v2 {
@@ -396,7 +396,7 @@ body,
 
 .hsl-carousel-element .hsl-actionable:hover,
 .hsl-carousel-element .hsl-actionable:focus {
-  background-color: #1F1F1F !important;
+  background-color: #FFBD51 !important;
   border-radius: 8px !important;
 }
 hsl-button-text message-section-message-button-text.v2:hover {
