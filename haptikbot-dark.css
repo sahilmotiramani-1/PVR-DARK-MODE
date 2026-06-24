@@ -25,10 +25,31 @@ body,
     object-fit: contain !important;
 }
 .extended-view.active {
-  background-color: #161616 !important;
-  /* border: 1px solid #FFBD51 !important; */
-  box-shadow: 0 4px 12px #F8A825 !important;
+    background: linear-gradient(
+        180deg,
+        #1c1c1c 0%,
+        #141414 100%
+    ) !important;
+
+    border: 1px solid rgba(239, 162, 73, 0.25) !important;
+
+    border-radius: 20px !important;
+
+    box-shadow:
+        0 0 0 1px rgba(239, 162, 73, 0.08),
+        0 8px 32px rgba(239, 162, 73, 0.18),
+        0 0 24px rgba(239, 162, 73, 0.12) !important;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
+  /* border: 1px solid #FFBD51 !important; */
+  /* box-shadow:
+  0 0 30px 10px rgba(255, 203, 5, 0.18),
+  0 0 60px 20px rgba(255, 203, 5, 0.12),
+  0 0 120px 40px rgba(255, 203, 5, 0.08),
+  0 0 180px 60px rgba(255, 203, 5, 0.04) !important; */
+
 [data-testid="headerSubtitleText"]{
   color: #858585 !important;
 }
@@ -190,7 +211,7 @@ body,
 /* ── QUICK REPLY CHIPS ────────────────────────────────────── */
 .hsl-actionable {
   padding: 6px 12px !important;
-  background-color: #1F1F1F !important;
+  background-color: #FFBD51 !important;
   border: 1px solid #FFBD51 !important;
   /* border-radius: 20px !important; */
   -webkit-tap-highlight-color: #FFBD51 !important;
@@ -298,7 +319,7 @@ body,
 }
 
 .hsl-carousel-element:hover {
-    box-shadow: 0 4px 12px #F8A825 !important;
+    box-shadow: 0px 0px 30px 15px #EFA24922 !important;
 }
 .hsl-actionables.message-section-message-button-actionables{
   color: #161616;
@@ -369,7 +390,9 @@ body,
     margin: 0 !important;
     line-height: 1.3 !important;
 }
-
+.composerv2-icon{
+  background-color: #FFBD51 !important;
+}
 /* Carousel CTA button */
 .hsl-carousel-element.hsl-carousel-elements-item .hsl-actionables  {
   flex-direction: column;
@@ -378,8 +401,9 @@ body,
   color: #858585 !important;
 }
 .hsl-actionable.message-section-message-button-actionable {
-  background-color: #161616 !important;
+  background-color: #FFBD51  !important;
   color: #0A0A0A !important;
+  border-radius: 12px !important;
   border: 1px solid #1F1F1F !important;
   box-shadow: 0 4px 12px rgba(248, 168, 37, 0.25) !important;
 }
@@ -603,9 +627,13 @@ body,
 }
 .composerv2-wrapper-voice.v2{
   background-color: #161616 !important;
+
 }
 .composerv2.v2{
   border: 2px solid #1F1F1F !important;
+}
+.composerv2.v2:hover {
+    border-color: #353535 !important;
 }
 .taskbox-new-wrapper{
   border-top: #161616 !important;
@@ -783,4 +811,57 @@ body,
   color: #FFBD51 !important;
   text-decoration: underline !important;
   text-underline-offset: 2px !important;
+}
+/* Book button */
+.hsl-actionables .hsl-actionable:first-child {
+    background-color: #FFBD51 !important;
+    border: 1px solid #FFBD51 !important;
+    border-radius: 12px !important;
+}
+
+.hsl-actionables .hsl-actionable:first-child .hsl-actionable-text.v2 {
+    color: #161616 !important;
+}
+
+/* Trailer text only */
+.hsl-actionables .hsl-actionable:nth-child(2) {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.hsl-actionables .hsl-actionable:nth-child(2) .hsl-actionable-text.v2 {
+    color: #ffffff   !important;
+}
+/* Disabled Book */
+.hsl-actionable:first-child.disabled,
+.hsl-actionable.message-section-message-button-actionable:first-child.disabled {
+    background: rgba(255, 189, 81, 0.4) !important;
+    border: 1px solid rgba(255, 189, 81, 0.4) !important;
+}
+
+.hsl-actionable:first-child.disabled .hsl-actionable-text.v2,
+.hsl-actionable.message-section-message-button-actionable:first-child.disabled .hsl-actionable-text.v2 {
+    color: rgba(10, 10, 10, 0.5) !important;
+}
+
+/* Disabled Trailer */
+.hsl-actionables .hsl-actionable:nth-child(2).disabled {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.hsl-actionables .hsl-actionable:nth-child(2).disabled .hsl-actionable-text.v2 {
+    color: #858585 !important;
+}
+rect#Rectangle{
+  display: none !important;
+}
+.taskbox-new-CTA-icon{
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+.composerv2-icon.right.disabled svg path {
+    fill: #FFBD51 !important;
 }
