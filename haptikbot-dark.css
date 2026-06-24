@@ -462,10 +462,10 @@ body,
 
 /* ── FORM CARD ────────────────────────────────────────────── */
 .hsl.form {
-  width: 340px !important;
-  background-color: #1F1F1F !important;
-  border: 1px solid #1F1F1F !important;
+  background: #1A1A1A !important;
+  border: 1px solid rgba(239,162,73,.2) !important;
   border-radius: 16px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35) !important;
 }
 
 .hsl.form + .message-timestamp.left {
@@ -486,24 +486,52 @@ body,
 }
 
 .hsl-form-element {
-  height: 32px !important;
-  background-color: #1F1F1F !important;
-  border: 1px solid #1F1F1F !important;
-  border-radius: 8px !important;
+  height: 40px !important;
+  background: #1A1A1A !important;
+  border: 1px solid rgba(239, 162, 73, 0.35) !important;
+  border-radius: 10px !important;
   color: #FFFFFF !important;
-  font-family: 'Inter', sans-serif !important;
+  transition: all .25s ease !important;
+  box-shadow: 0 0 0 transparent !important;
+}
+.hsl-form-element:hover {
+  border-color: #EFA249 !important;
+  box-shadow: 0 0 12px rgba(239, 162, 73, 0.12) !important;
 }
 
-.hsl-form-element:focus {
-  border-color: #000 !important;
-  outline: none !important;
+
+.hsl-form-element:focus-within {
+  border-color: #FFBD51 !important;
+  box-shadow: 0 0 0 2px rgba(255,189,81,.15) !important;
+}
+.hsl-form-element-icon-s3 {
+  background: rgba(239,162,73,.12) !important;
+  border-radius: 8px !important;
+  padding: 6px !important;
+  color: #EFA249 !important;
+}
+.hsl-form-element {
+  position: relative !important;
+}
+
+.hsl-form-element::after {
+  content: "⌄";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #EFA249;
+  font-size: 14px;
+  pointer-events: none;
 }
 
 .hsl-form-element-input,
 .hsl-form-element-input.v2 {
   color: #FFFFFF !important;
-  -webkit-text-fill-color: #FFFFFF !important;
-  opacity: 1 !important;
+  background: transparent !important;
+  padding-left: 8px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
 }
 
 .hsl-form-element-input.empty:not(:focus) {
