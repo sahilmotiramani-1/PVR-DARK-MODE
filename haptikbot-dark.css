@@ -32,14 +32,14 @@ body,
     ) !important;
 
     border: 1px solid rgba(239, 162, 73, 0.25) !important;
-
     border-radius: 20px !important;
 
     box-shadow:
-        0 0 0 1px rgba(239, 162, 73, 0.08),
-        0 8px 32px rgba(239, 162, 73, 0.18),
-        0 0 24px rgba(239, 162, 73, 0.12) !important;
+        0 0 0 1px rgba(239, 162, 73, 0.06),
+        0 12px 40px rgba(239, 162, 73, 0.16),
+        0 0 50px rgba(239, 162, 73, 0.10) !important;
 
+    overflow: hidden !important;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
@@ -463,8 +463,8 @@ body,
 /* ── FORM CARD ────────────────────────────────────────────── */
 .hsl.form {
   background: #1A1A1A !important;
-  border: 1px solid rgba(239,162,73,.2) !important;
-  border-radius: 16px !important;
+  border: 1.8px solid rgba(239,162,73,.2) !important;
+  border-radius: 11px !important;
   box-shadow: 0 8px 24px rgba(0,0,0,.35) !important;
 }
 
@@ -532,8 +532,17 @@ body,
   padding-left: 8px !important;
   font-size: 13px !important;
   font-weight: 500 !important;
-}
 
+  height: 40px !important;
+  line-height: 40px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  box-sizing: border-box !important;
+}
+.hsl-form-element {
+  display: flex !important;
+  align-items: center !important;
+}
 .hsl-form-element-input.empty:not(:focus) {
   opacity: 1 !important;
 }
@@ -608,8 +617,8 @@ body,
   font-family: 'Inter', sans-serif !important;
   background-color: #FFBD51 !important;
   color: #0A0A0A !important;
-  border: 1px solid #1F1F1F !important;
-  border-radius: 8px !important;
+  border: 2.5px solid #1F1F1F !important;
+  border-radius: 12px !important;
   box-shadow: 0 4px 12px rgba(248, 168, 37, 0.25) !important;
   transition: background-color 0.2s ease !important;
 }
@@ -670,11 +679,11 @@ body,
   color: #B5B5B5 !important;
 }
 .taskbox-new-CTA-text.left{
-  font-weight: 50 !important;
+  font-weight: 70 !important;
 
 }
 .taskbox-new-CTA-text.left:hover{
-  font-weight: 50 !important;
+  font-weight: 70 !important;
 
 }
 .composerv2-text-area.v2 {
@@ -892,4 +901,32 @@ rect#Rectangle{
 }
 .composerv2-icon.right.disabled svg path {
     fill: #FFBD51 !important;
+}
+.hsl-form-button.active {
+    height: auto !important;
+    min-height: 48px !important;
+    overflow: visible !important;
+}
+.hsl-form-button.active .hsl-form-button-body {
+    height: auto !important;
+    min-height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 12px 16px !important;
+    line-height: 1.4 !important;
+}
+.hsl-form,
+.message-section-message,
+.message-row {
+    overflow: visible !important;
+}
+.hsl-form-button.active {
+    height: auto !important;
+    min-height: 50px !important;
+}
+
+.hsl-form-button.active .hsl-form-button-body {
+    padding: 12px 16px !important;
+    line-height: 20px !important;
 }
