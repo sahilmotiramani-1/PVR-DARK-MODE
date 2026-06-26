@@ -543,7 +543,7 @@ iframe#haptik-xdk-main-view.xdk-iframe {
   top: 50%;
   transform: translateY(-50%);
   color: #EFA249;
-  font-size: 25px !important;
+  font-size: 30px !important;
   font-weight: 500 !important;
   pointer-events: none;
 }
@@ -639,7 +639,7 @@ iframe#haptik-xdk-main-view.xdk-iframe {
   background-color: #FFBD51 !important;
   color: #0A0A0A !important;
   border: 2.5px solid #1F1F1F !important;
-  border-radius: 12px !important;
+  border-radius: 10px !important;
   box-shadow: 0 4px 12px rgba(248, 168, 37, 0.25) !important;
   transition: background-color 0.2s ease !important;
 }
@@ -899,7 +899,7 @@ iframe#haptik-xdk-main-view.xdk-iframe {
 .hsl-actionables .hsl-actionable:first-child {
     background-color: #FFBD51 !important;
     border: 1px solid #FFBD51 !important;
-    border-radius: 12px !important;
+    border-radius: 8px !important;
 }
 
 .hsl-actionables .hsl-actionable:first-child .hsl-actionable-text.v2 {
@@ -1060,6 +1060,9 @@ div.hsl-form-element {
   margin-left: 8px !important;
   margin-right: 8px !important;
   margin-bottom: 8px !important;
+}
+.hsl-form-element-icon-s3 {
+    display: none;
 }
     /* padding: 8px 12px !important;
     font-size: 12px !important;
